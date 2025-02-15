@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <!-- Website/App Input -->
+        <div class="inputBox">
+            <input type="text" id="appName" placeholder="Enter website/app name">
+        </div>
+
+        <!-- Password Box -->
+        <div class="inputBox password-container">
+            <input type="text" id="passBox" disabled>
+            <div class="icon-container">
+                <span class="material-icons" id="toggleVisibility">visibility</span>
+                <span class="material-icons" id="copyIcon">content_copy</span>
+            </div>
+        </div>
+
+        <!-- Password Length Slider -->
+        <input type="range" min="3" max="12" value="8" id="inputSlider">
+        <div class="row">
+            <p>Password Length</p>
+            <span id="sliderValue">8</span>
+        </div>
+
+        <!-- Options -->
+        <div class="row"><label><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label></div>
+        <div class="row"><label><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label></div>
+        <div class="row"><label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label></div>
+        <div class="row"><label><input type="checkbox" id="symbols" checked> Symbols (@-*)</label></div>
+
+        <!-- Buttons -->
+        <button class="genBtn" id="genBtn">Generate Password</button>
+        <button class="saveBtn" id="saveBtn">Save Password</button>
+    </div>
+
+    <!-- Saved Passwords Section -->
+    <div class="saved-container">
+        <h2 id="toggleSaved">Saved Passwords</h2>
+        <ul id="savedPasswords" class="hidden"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

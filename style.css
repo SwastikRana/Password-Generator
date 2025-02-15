@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #5d080b, #dd775b);
+    color: #f5f5ef;
+    padding: 20px;
+}
+
+.container, .saved-container {
+    background: rgba(245, 243, 243, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    margin-top: 20px;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.material-icons {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+.material-icons:hover {
+    color: #ff5757;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.genBtn, .saveBtn {
+    background: #ff758c;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.genBtn:hover, .saveBtn:hover {
+    background: #ff5757;
+}
+
+.saved-container {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul li {
+    background: rgba(246, 241, 241, 0.2);
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    word-break: break-word;
+}
+
+/* Hide saved passwords by default */
+.hidden {
+    display: none;
+}
